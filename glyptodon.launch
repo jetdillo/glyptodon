@@ -1,0 +1,9 @@
+<launch>
+	<node name="irobot_create_2_1" pkg="irobot_create_2_1" type="driver.py" respawn="true"/>
+	<node name="xv_11_laser_driver" pkg="xv_11_laser_driver" type="neato_laser_publisher">
+		<param name="firmware_version" value="2" />
+		<param name="port" value="/dev/ttyO1" /> 
+	</node>
+	<node name="glyptodon" pkg="glyptodon" type="xv11_motor_control.py"/>
+</launch>
+
